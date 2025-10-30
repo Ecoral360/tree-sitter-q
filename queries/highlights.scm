@@ -4,11 +4,26 @@
 [
  "private"
  "public"
- "type""extern""var""const""special""virtual""def""undef""if""then""else""where""otherwise""import""include""from"
+ "type"
+ "extern"
+ "var"
+ "const"
+ "special"
+ "virtual"
+ "def"
+ "undef"
+ "if"
+ "then"
+ "else"
+ "where"
+ "otherwise"
+ "import"
+ "include"
+ "from"
  ] @keyword
 
 ;; --- Types ---
-; ((type_identifier) @type)
+((type_identifier) @type)
 ; ((unqualified_identifier) @type)
 
 ;; --- Variables ---

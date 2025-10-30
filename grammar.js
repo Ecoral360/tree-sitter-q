@@ -149,19 +149,20 @@ module.exports = grammar({
     // --- Definitions ---
     definition: ($) =>
       prec.left(
+        3,
         choice(
           seq(
-            $._expression,
+            $.expression,
             optional($.lqualifiers),
             "=",
-            $._expression,
+            $.expression,
             optional($.qualifiers),
             ";",
             repeat(
               seq(
                 optional($.lqualifiers),
                 "=",
-                $._expression,
+                $.expression,
                 optional($.qualifiers),
                 ";",
               ),
@@ -179,18 +180,18 @@ module.exports = grammar({
         ),
       ),
 
-    lqualifiers: ($) => seq(repeat($.qualifier), ":"),
+    lqualifiers: ($) => seq(repeat1($.qualifier), ":"),
     qualifiers: ($) => repeat1($.qualifier),
     qualifier: ($) => choice($.condition, $.where_clause),
 
-    condition: ($) => choice(seq("if", $._expression), "otherwise"),
+    condition: ($) => choice(seq("if", $.expression), "otherwise"),
     where_clause: ($) =>
       seq(
         "where",
-        $._expression,
+        $.expression,
         "=",
-        $._expression,
-        repeat(seq(",", $._expression, "=", $._expression)),
+        $.expression,
+        repeat(seq(",", $.expression, "=", $.expression)),
       ),
 
     // --- Expressions (Pratt-like via precedence helpers) ---
@@ -201,15 +202,14 @@ module.exports = grammar({
           $.identifier,
           $.var_decl,
           $.typed_var,
-          $.unsigned_number,
           $.string,
           $.lambda,
+          $.unsigned_number,
           $.conditional,
           $.parenthesized,
           $.bracketed,
           $.brace_enclosed,
           $.operator_literal,
-          $.binary_section,
         ),
       ),
 
@@ -231,7 +231,12 @@ module.exports = grammar({
 
     // var declaration: 'var' unqualified-identifier
     var_decl: ($) => seq("var", $.unqualified_identifier),
-    typed_var: ($) => seq($.variable_identifier, ":", $.identifier),
+    typed_var: ($) =>
+      seq(
+        $.variable_identifier,
+        ":",
+        choice($.qualified_identifier, $.type_identifier),
+      ),
 
     // literals
     // number: ($) => seq(optional("-"), $.unsigned_number),
@@ -250,7 +255,10 @@ module.exports = grammar({
     parenthesized: ($) =>
       seq(
         "(",
-        optional(choice($.element_list, $.enumeration, $.comprehension)),
+        choice(
+          $.binary_section,
+          optional(choice($.element_list, $.enumeration, $.comprehension)),
+        ),
         ")",
       ),
     bracketed: ($) =>
@@ -289,10 +297,7 @@ module.exports = grammar({
     // operator literal and sections: (op), (expr op), (op expr)
     operator_literal: ($) => seq("(", $.op, ")"),
     binary_section: ($) =>
-      choice(
-        seq("(", $._expression, $.binary_op, ")"),
-        seq("(", $.binary_op, $._expression, ")"),
-      ),
+      choice(seq($.expression, $.binary_op), seq($.binary_op, $.expression)),
 
     op: ($) => choice($.unary_op, $.binary_op),
 
@@ -303,7 +308,7 @@ module.exports = grammar({
     opsym: ($) => choice($.qualified_opsym, $.unqualified_opsym),
     qualified_opsym: ($) => seq($.module_identifier, "::", $.unqualified_opsym),
     unqualified_opsym: ($) =>
-      choice($.function_identifier, /[\p{Punctuation}]+/u),
+      choice($.function_identifier, /((!?;)\p{Punctuation})+/u),
 
     // explicit operator tokens for common symbols (optional helpers)
     // we also make sure relational tokens are separate
@@ -314,26 +319,25 @@ module.exports = grammar({
       prec.left(10, seq(choice("`", "'", "~", "&"), $._expression)),
 
     // Application (juxtaposition) - implemented as left-assoc with high precedence
-    application: ($) => prec.left(9, seq($._expression, $._expression)),
+    application: ($) => prec.left(9, seq($.expression, $._expression)),
 
     // Composition
-    composition: ($) => prec.left(8, seq($._expression, ".", $._expression)),
+    composition: ($) => prec.left(8, seq($.expression, ".", $._expression)),
 
     // Exponentiation and subscript (right-assoc)
     exponent: ($) =>
       prec.right(7, seq($._expression, choice("^", "!"), $._expression)),
 
     // Prefix ops
-    prefix_op: ($) =>
-      prec.right(6, seq(choice("-", "#", "not"), $._expression)),
+    prefix_op: ($) => prec.right(6, seq(choice("-", "#", "not"), $.expression)),
 
     // Multiplicative
     multiplicative: ($) =>
       prec.left(
         5,
         seq(
-          $._expression,
-          choice("*", "/", "div", "mod", "and", "and-then"),
+          $.expression,
+          field("binop_op", choice("*", "/", "div", "mod", "and", "and-then")),
           $._expression,
         ),
       ),
@@ -343,8 +347,8 @@ module.exports = grammar({
       prec.left(
         4,
         seq(
-          $._expression,
-          choice("++", "+", "-", "or", "or-else"),
+          $.expression,
+          field("binop_op", choice("++", "+", "-", "or", "or-else")),
           $._expression,
         ),
       ),
@@ -355,14 +359,14 @@ module.exports = grammar({
         3,
         seq(
           $._expression,
-          choice("<", ">", "=", "<=", ">=", "<>", "=="),
+          field("cmpop_op", choice("<", ">", "<=", ">=", "<>", "==")),
           $._expression,
         ),
       ),
 
     // Infix application '$' (right assoc)
     infix_application: ($) =>
-      prec.right(2, seq($._expression, "$", $._expression)),
+      prec.right(2, seq($._expression, field("appop_op", "$"), $._expression)),
 
     // Conditional/if-then-else
     conditional: ($) =>
@@ -378,7 +382,7 @@ module.exports = grammar({
       ),
 
     // Sequence operator '||'
-    sequence: ($) => prec.left(0, seq($._expression, "||", $._expression)),
+    sequence: ($) => prec.left(0, seq($.expression, "||", $.expression)),
 
     // Lambda (lowest)
     lambda: ($) =>

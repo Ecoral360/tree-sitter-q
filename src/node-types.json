@@ -2,15 +2,38 @@
   {
     "type": "additive",
     "named": true,
-    "fields": {},
+    "fields": {
+      "binop_op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "++",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "or-else",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -21,6 +44,10 @@
         },
         {
           "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "expression",
           "named": true
         },
         {
@@ -67,10 +94,6 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
           "type": "brace_enclosed",
           "named": true
         },
@@ -80,6 +103,10 @@
         },
         {
           "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "expression",
           "named": true
         },
         {
@@ -145,51 +172,7 @@
           "named": true
         },
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
-          "type": "brace_enclosed",
-          "named": true
-        },
-        {
-          "type": "bracketed",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "lambda",
-          "named": true
-        },
-        {
-          "type": "operator_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "typed_var",
-          "named": true
-        },
-        {
-          "type": "unsigned_number",
-          "named": true
-        },
-        {
-          "type": "var_decl",
+          "type": "expression",
           "named": true
         }
       ]
@@ -250,10 +233,6 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
           "type": "brace_enclosed",
           "named": true
         },
@@ -263,6 +242,10 @@
         },
         {
           "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "expression",
           "named": true
         },
         {
@@ -308,10 +291,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -372,51 +351,7 @@
       "required": false,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
-          "type": "brace_enclosed",
-          "named": true
-        },
-        {
-          "type": "bracketed",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "lambda",
-          "named": true
-        },
-        {
-          "type": "operator_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "typed_var",
-          "named": true
-        },
-        {
-          "type": "unsigned_number",
-          "named": true
-        },
-        {
-          "type": "var_decl",
+          "type": "expression",
           "named": true
         }
       ]
@@ -430,10 +365,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -541,22 +472,6 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
-          "type": "brace_enclosed",
-          "named": true
-        },
-        {
-          "type": "bracketed",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
           "type": "expression",
           "named": true
         },
@@ -565,39 +480,11 @@
           "named": true
         },
         {
-          "type": "lambda",
-          "named": true
-        },
-        {
           "type": "lqualifiers",
           "named": true
         },
         {
-          "type": "operator_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized",
-          "named": true
-        },
-        {
           "type": "qualifiers",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "typed_var",
-          "named": true
-        },
-        {
-          "type": "unsigned_number",
-          "named": true
-        },
-        {
-          "type": "var_decl",
           "named": true
         }
       ]
@@ -630,10 +517,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -693,10 +576,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -758,10 +637,6 @@
         },
         {
           "type": "application",
-          "named": true
-        },
-        {
-          "type": "binary_section",
           "named": true
         },
         {
@@ -852,10 +727,6 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
           "type": "brace_enclosed",
           "named": true
         },
@@ -910,10 +781,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -1022,15 +889,22 @@
   {
     "type": "infix_application",
     "named": true,
-    "fields": {},
+    "fields": {
+      "appop_op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "$",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -1087,10 +961,6 @@
         "required": true,
         "types": [
           {
-            "type": "binary_section",
-            "named": true
-          },
-          {
             "type": "brace_enclosed",
             "named": true
           },
@@ -1140,10 +1010,6 @@
         "multiple": true,
         "required": true,
         "types": [
-          {
-            "type": "binary_section",
-            "named": true
-          },
           {
             "type": "brace_enclosed",
             "named": true
@@ -1198,7 +1064,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "qualifier",
@@ -1258,15 +1124,42 @@
   {
     "type": "multiplicative",
     "named": true,
-    "fields": {},
+    "fields": {
+      "binop_op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "and-then",
+            "named": false
+          },
+          {
+            "type": "div",
+            "named": false
+          },
+          {
+            "type": "mod",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -1277,6 +1170,10 @@
         },
         {
           "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "expression",
           "named": true
         },
         {
@@ -1376,6 +1273,10 @@
       "required": false,
       "types": [
         {
+          "type": "binary_section",
+          "named": true
+        },
+        {
           "type": "comprehension",
           "named": true
         },
@@ -1437,51 +1338,7 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
-          "type": "brace_enclosed",
-          "named": true
-        },
-        {
-          "type": "bracketed",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "lambda",
-          "named": true
-        },
-        {
-          "type": "operator_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "typed_var",
-          "named": true
-        },
-        {
-          "type": "unsigned_number",
-          "named": true
-        },
-        {
-          "type": "var_decl",
+          "type": "expression",
           "named": true
         }
       ]
@@ -1587,10 +1444,6 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
           "type": "brace_enclosed",
           "named": true
         },
@@ -1640,15 +1493,42 @@
   {
     "type": "relational",
     "named": true,
-    "fields": {},
+    "fields": {
+      "cmpop_op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<>",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "binary_section",
-          "named": true
-        },
         {
           "type": "brace_enclosed",
           "named": true
@@ -1769,51 +1649,7 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
-          "type": "brace_enclosed",
-          "named": true
-        },
-        {
-          "type": "bracketed",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "lambda",
-          "named": true
-        },
-        {
-          "type": "operator_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "typed_var",
-          "named": true
-        },
-        {
-          "type": "unsigned_number",
-          "named": true
-        },
-        {
-          "type": "var_decl",
+          "type": "expression",
           "named": true
         }
       ]
@@ -1867,7 +1703,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "qualified_identifier",
+          "named": true
+        },
+        {
+          "type": "type_identifier",
           "named": true
         },
         {
@@ -1989,51 +1829,7 @@
       "required": true,
       "types": [
         {
-          "type": "binary_section",
-          "named": true
-        },
-        {
-          "type": "brace_enclosed",
-          "named": true
-        },
-        {
-          "type": "bracketed",
-          "named": true
-        },
-        {
-          "type": "conditional",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "lambda",
-          "named": true
-        },
-        {
-          "type": "operator_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "typed_var",
-          "named": true
-        },
-        {
-          "type": "unsigned_number",
-          "named": true
-        },
-        {
-          "type": "var_decl",
+          "type": "expression",
           "named": true
         }
       ]
