@@ -1,5 +1,123 @@
 [
   {
+    "type": "additive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "application",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "binary_op",
     "named": true,
     "fields": {},
@@ -15,6 +133,174 @@
     }
   },
   {
+    "type": "binary_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_op",
+          "named": true
+        },
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "brace_enclosed",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "comprehension",
+          "named": true
+        },
+        {
+          "type": "element_list",
+          "named": true
+        },
+        {
+          "type": "enumeration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bracketed",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "comprehension",
+          "named": true
+        },
+        {
+          "type": "element_list",
+          "named": true
+        },
+        {
+          "type": "enumeration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "composition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "comprehension",
     "named": true,
     "fields": {},
@@ -23,11 +309,55 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
           "named": true
         },
         {
           "type": "expression_list",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -42,7 +372,110 @@
       "required": false,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conditional",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -108,6 +541,22 @@
       "required": true,
       "types": [
         {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
           "type": "expression",
           "named": true
         },
@@ -116,11 +565,39 @@
           "named": true
         },
         {
+          "type": "lambda",
+          "named": true
+        },
+        {
           "type": "lqualifiers",
           "named": true
         },
         {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
           "type": "qualifiers",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -154,11 +631,114 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
           "named": true
         },
         {
           "type": "expression_list",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exponent",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -169,27 +749,39 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
-          "type": "binary_op",
+          "type": "additive",
           "named": true
         },
         {
-          "type": "comprehension",
+          "type": "application",
           "named": true
         },
         {
-          "type": "element_list",
+          "type": "binary_section",
           "named": true
         },
         {
-          "type": "enumeration",
+          "type": "brace_enclosed",
           "named": true
         },
         {
-          "type": "expression",
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "composition",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "exponent",
           "named": true
         },
         {
@@ -197,11 +789,39 @@
           "named": true
         },
         {
-          "type": "number",
+          "type": "infix_application",
           "named": true
         },
         {
-          "type": "op",
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "multiplicative",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "prefix_op",
+          "named": true
+        },
+        {
+          "type": "quotation",
+          "named": true
+        },
+        {
+          "type": "relational",
+          "named": true
+        },
+        {
+          "type": "sequence",
           "named": true
         },
         {
@@ -209,15 +829,15 @@
           "named": true
         },
         {
-          "type": "unary_op",
+          "type": "typed_var",
           "named": true
         },
         {
-          "type": "unqualified_identifier",
+          "type": "unsigned_number",
           "named": true
         },
         {
-          "type": "variable_identifier",
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -232,7 +852,51 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -247,7 +911,35 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
           "named": true
         },
         {
@@ -263,11 +955,27 @@
           "named": true
         },
         {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
           "type": "unqualified_identifier",
           "named": true
         },
         {
           "type": "unqualified_opsym",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         },
         {
@@ -312,12 +1020,185 @@
     }
   },
   {
-    "type": "lqualifiers",
+    "type": "infix_application",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
       "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lambda",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_section",
+            "named": true
+          },
+          {
+            "type": "brace_enclosed",
+            "named": true
+          },
+          {
+            "type": "bracketed",
+            "named": true
+          },
+          {
+            "type": "conditional",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "operator_literal",
+            "named": true
+          },
+          {
+            "type": "parenthesized",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "typed_var",
+            "named": true
+          },
+          {
+            "type": "unsigned_number",
+            "named": true
+          },
+          {
+            "type": "var_decl",
+            "named": true
+          }
+        ]
+      },
+      "param": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_section",
+            "named": true
+          },
+          {
+            "type": "brace_enclosed",
+            "named": true
+          },
+          {
+            "type": "bracketed",
+            "named": true
+          },
+          {
+            "type": "conditional",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "lambda",
+            "named": true
+          },
+          {
+            "type": "operator_literal",
+            "named": true
+          },
+          {
+            "type": "parenthesized",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "typed_var",
+            "named": true
+          },
+          {
+            "type": "unsigned_number",
+            "named": true
+          },
+          {
+            "type": "var_decl",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "lqualifiers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
       "types": [
         {
           "type": "qualifier",
@@ -328,6 +1209,11 @@
   },
   {
     "type": "modifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "module_identifier",
     "named": true,
     "fields": {}
   },
@@ -370,15 +1256,59 @@
     }
   },
   {
-    "type": "number",
+    "type": "multiplicative",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
           "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -404,6 +1334,21 @@
     }
   },
   {
+    "type": "operator_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "op",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "opsym",
     "named": true,
     "fields": {},
@@ -417,6 +1362,29 @@
         },
         {
           "type": "unqualified_opsym",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parenthesized",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "comprehension",
+          "named": true
+        },
+        {
+          "type": "element_list",
+          "named": true
+        },
+        {
+          "type": "enumeration",
           "named": true
         }
       ]
@@ -455,6 +1423,65 @@
         },
         {
           "type": "scope",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "prefix_op",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -552,6 +1579,129 @@
     }
   },
   {
+    "type": "quotation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "relational",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scalefact",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "scope",
     "named": true,
     "fields": {}
@@ -563,7 +1713,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "declaration",
@@ -611,6 +1761,65 @@
     }
   },
   {
+    "type": "sequence",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "symbol_spec",
     "named": true,
     "fields": {},
@@ -619,7 +1828,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "unqualified_identifier",
+          "named": true
+        },
+        {
+          "type": "unqualified_opsym",
           "named": true
         }
       ]
@@ -635,6 +1848,30 @@
       "types": [
         {
           "type": "symbol_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "typed_var",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "variable_identifier",
           "named": true
         }
       ]
@@ -665,6 +1902,10 @@
       "types": [
         {
           "type": "function_identifier",
+          "named": true
+        },
+        {
+          "type": "type_identifier",
           "named": true
         },
         {
@@ -705,6 +1946,36 @@
     }
   },
   {
+    "type": "unsigned_number",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "scalefact",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_decl",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "unqualified_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "variable_identifier",
     "named": true,
     "fields": {}
@@ -718,7 +1989,51 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
+          "type": "binary_section",
+          "named": true
+        },
+        {
+          "type": "brace_enclosed",
+          "named": true
+        },
+        {
+          "type": "bracketed",
+          "named": true
+        },
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "lambda",
+          "named": true
+        },
+        {
+          "type": "operator_literal",
+          "named": true
+        },
+        {
+          "type": "parenthesized",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "typed_var",
+          "named": true
+        },
+        {
+          "type": "unsigned_number",
+          "named": true
+        },
+        {
+          "type": "var_decl",
           "named": true
         }
       ]
@@ -829,6 +2144,10 @@
     "named": false
   },
   {
+    "type": "E",
+    "named": false
+  },
+  {
     "type": "[",
     "named": false
   },
@@ -882,6 +2201,10 @@
     "named": false
   },
   {
+    "type": "e",
+    "named": false
+  },
+  {
     "type": "else",
     "named": false
   },
@@ -912,10 +2235,6 @@
   {
     "type": "mod",
     "named": false
-  },
-  {
-    "type": "module_identifier",
-    "named": true
   },
   {
     "type": "not",
@@ -965,10 +2284,6 @@
   {
     "type": "undef",
     "named": false
-  },
-  {
-    "type": "unsigned_number",
-    "named": true
   },
   {
     "type": "var",

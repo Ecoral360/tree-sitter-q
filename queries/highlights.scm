@@ -20,12 +20,11 @@
 ((qualified_opsym) @function)
 
 ;; --- Modules ---
-((module_identifier) @namespace)
+;((module_identifier) @namespace)
 ((qualified_identifier) @namespace)
 
 ;; --- Literals ---
 ((string) @string)
-((number) @number)
 ((unsigned_number) @number)
 
 ;; --- Operators ---
